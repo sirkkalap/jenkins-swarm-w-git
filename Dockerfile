@@ -4,6 +4,14 @@ MAINTAINER Petri Sirkkala <sirpete@iki.fi>
 
 ENV GIT_HOME /usr/bin/git
 
+ENV JENKINS_SSH_CREDENTIALS_VERSION 1.10
+
+RUN curl -sSL --create-dirs -o /usr/share/jenkins/plugins/ssh-credentials.hpi https://updates.jenkins-ci.org/download/plugins/ssh-credentials/$JENKINS_SSH_CREDENTIALS_VERSION/ssh-credentials.hpi
+
+ENV JENKINS_CREDENTIALS_VERSION 1.20
+
+RUN curl -sSL --create-dirs -o /usr/share/jenkins/plugins/credentials.hpi https://updates.jenkins-ci.org/download/plugins/credentials/$JENKINS_CREDENTIALS_VERSION/credentials.hpi
+
 ENV JENKINS_GIT_CLIENT_VERSION 1.14.0
 
 RUN curl -sSL --create-dirs -o /usr/share/jenkins/plugins/git-client.hpi https://updates.jenkins-ci.org/download/plugins/git-client/$JENKINS_GIT_CLIENT_VERSION/git-client.hpi
