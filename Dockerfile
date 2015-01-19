@@ -3,7 +3,7 @@ FROM csanchez/jenkins-swarm
 MAINTAINER Petri Sirkkala <sirpete@iki.fi>
 
 # I like utf-8 (mostly)
-ENV JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
+ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
 
 # Time zone
 RUN echo "Europe/Helsinki" > /etc/timezone \
