@@ -2,6 +2,9 @@ FROM csanchez/jenkins-swarm
 
 MAINTAINER Petri Sirkkala <sirpete@iki.fi>
 
+# I like utf-8 (mostly)
+JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
+
 ENV GIT_HOME /usr/bin/git
 
 ENV JENKINS_SSH_CREDENTIALS_VERSION 1.10
